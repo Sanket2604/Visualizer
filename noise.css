@@ -14,10 +14,10 @@ canvas{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: 1s;
+    transition: 10s;
     animation-name: animate;
     animation-direction: normal;
-    animation-duration: 50s;
+    animation-duration: 300s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-play-state: running;
