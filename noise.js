@@ -5,7 +5,7 @@ const treble = document.getElementById('treble')
 const visualizer = document.getElementById('visualizer')
 
 const context = new AudioContext()
-const analyserNode = new AnalyserNode(context, { fftSize: 1024 })
+const analyserNode = new AnalyserNode(context, { fftSize: 2048 })
 
 setupContext()
 resize()
@@ -46,10 +46,10 @@ function drawVisualiser(){
     canvasContext.clearRect( 0, 0, width, height)
 
     dataArray.forEach((item, index) => {
-        const y = item / 255 * height / 1.5
+        const y = item / 255 * height / 3
         const x = barWidth * index
 
-        canvasContext.fillStyle = `hsl(${y / height * 200}, 100%, 50%)`
+        canvasContext.fillStyle = `hsl(${y / height * 800}, 100%, 50%)`
         canvasContext.fillRect(x, height - y, barWidth, y)
     })
 }
